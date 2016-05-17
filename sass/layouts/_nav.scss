@@ -1,0 +1,64 @@
+/* Main Nav */
+
+  .nav-inner {
+        display: inline-block;
+        @include vertical(middle);
+      
+      @media screen and (max-width: 1280px) {
+          position: absolute;
+          display: block;
+          background-color: $white;
+          z-index: 1;
+           @include position (absolute, 30px, auto);
+          top: 70%;
+          width: 27%;
+      }
+    }
+    
+    .nav-inner li {
+         @include main-font($main-color, 300, 1em, 1.25, $font-light); 
+        float: left;
+        padding: 15px;
+        border-right: 1px solid $right-border;
+        
+        &:first-child {
+            border-left: 1px solid $right-border;
+        }
+        
+         @media screen and (max-width: 1280px) {
+            @include float-box(none);
+             border: 1px solid $right-border;
+        }
+    }
+
+/* Footer Nav */
+    
+    .footer-list {
+        @media screen and (max-width: 1280px ) {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: auto;
+            background-color: transparent;
+            display: inline-block;
+        }
+        
+        li {
+            border-right: none;
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 1.714;
+            margin-right: $margin + 5;
+            
+            &:first-child {
+                border-left: none;
+            }
+            
+            @media screen and (max-width: 1280px ) {
+                float: left;
+                border: none;
+            }
+            
+        }
+    }
+    

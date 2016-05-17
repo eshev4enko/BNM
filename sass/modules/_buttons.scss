@@ -1,0 +1,153 @@
+/* Likes btn */
+
+    .like {
+        @include position (absolute, 14%, 7px);
+        
+        button {
+            float: left;
+        }
+        
+        .twitt-like {
+            background-color: $twitter-bg;
+            max-width: $width;
+            height: 33px;
+            padding: 0 $padding;
+
+            span {
+                @include main-font($white, 500, 14px, 1.714, $font-medium); 
+                 padding-right: $padding;
+                 padding-left: $padding / 2;
+                 @include float-box(left);
+            }
+
+            &:after {
+                content: '19';
+                @include main-font($clear, 400, 0.875em, 1.714, $font-light);
+                 @include float-box(left);
+                margin-top: $margin / 3 - 3;
+            }
+
+            .twitt-logo {
+                @include svg($white, 15px, 15px);
+                @include float-box(left);
+                margin-top: $margin / 3 - 2;
+            }
+        }
+
+        .facebook-like {
+            background-color: $facebook-bg;
+            @include main-font($white, 500, 0.875em, 1.714, $main-font); 
+            max-width: $width;
+            height: 33px;
+            padding: 0 $padding;
+            
+             span {
+              @include main-font($white, 500, 14px, 1.714, $font-medium); 
+              padding-right: $padding;
+              padding-left: $padding / 2;
+              @include float-box(left);
+            }
+
+            &:after {
+                content: '21';
+                @include main-font($clear, 400, 0.875em, 1.714, $font-light); 
+                @include float-box(left);
+                margin-top: $margin / 3 - 3;
+            }
+            
+           .facebook-logo {
+                 @include svg($white, 15px, 15px);
+                 @include float-box(left);
+               margin-top: $margin / 3 - 2;
+            }
+        }
+             
+        .vk-like {
+            background-color: $vk-bg;
+            @include main-font($white, 500, 0.875em, 1.714, $font-medium); 
+            max-width: $width;
+            height: 33px;
+            padding: 0 $padding;
+            
+             span {
+              @include main-font($white, 500, 14px, 1.714, $font-medium); 
+              padding-right: $padding;
+              padding-left: $padding / 2;
+              @include float-box(left);
+            }
+
+            &:after {
+                content: '161';
+                @include main-font($clear, 400, 0.875em, 1.714, $font-light); 
+                @include float-box(left);
+                margin-top: $margin / 3 - 3;
+            }
+            
+            .vk-logo {
+                @include svg($white, 15px, 15px);
+                @include float-box(left);
+                margin-top: $margin / 3 - 2;
+            }
+        }
+        
+        @media screen and (max-width: 1280px) {
+             @include display (none);
+        }
+    }
+
+/* Green btn */
+
+   .miracle-btn {
+        border: 1px solid #dfdfdf;
+        box-sizing: border-box;
+        background-color:  rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.39);
+        border-radius: 50px;
+        width: 320px;
+        height: 60px;
+        color:  #909090;
+        font-size: 1.125em;
+        margin: 0 auto;
+        display: block;
+        position: $main-position;
+        margin-bottom: 50px;
+        
+        &:hover {
+            background-color:  rgba(0, 0, 0, 0.04);
+        }
+        
+          &:before {
+           @include grey-dash;
+            left: 111%;
+        }
+        
+        &:after {
+            @include grey-dash;
+            right: 111%;
+        }
+       
+       @media screen and (max-width: 1280px) {
+            @include display(none);
+        }
+    }
+
+/* BTN send */
+
+        .green-btn {
+            border-radius: $border-radius;
+            background-color: #13b04b;
+            color: #f6f6f6;
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 1.571;
+            width: 104px;
+            height: 33px;
+            margin-top: 7px;
+            
+            @media screen and (max-width: 1280px) {
+                width: 185px;
+                height: 60px;
+                @include main-font($white, 400, 1.75em, 0.786, $main-font); 
+                border-radius: 4px;
+            }
+        }

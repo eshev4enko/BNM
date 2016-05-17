@@ -1,0 +1,96 @@
+@mixin before-after($name-img, $value) {
+    content: '';
+    background-image: url(../img/#{$name-img}.#{$value}); 
+}
+
+@mixin svg ($color, $width, $height) {
+    fill: $color;
+    width: $width;
+    height: $height;
+}
+
+@mixin center  {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+@mixin position($absolute, $left, $bottom)  {
+    position: $absolute;
+    left: $left;
+    bottom: $bottom;
+}
+
+@mixin main-font($white, $weight, $num, $line-height, $main-font)  {
+    color: $white;
+    font-weight: $weight;
+    font-size: $num;
+    line-height: $line-height;
+    font-family: $main-font;
+}
+
+@mixin grey-dash {
+     content: '';
+     border-top: 1px solid #d6d6d6;
+     position: absolute;
+     width: 521px;
+     top: 30px;
+}
+
+@mixin side {
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+
+@mixin vertical($vertical) {
+    vertical-align: $vertical;
+}
+
+
+@mixin float-box ($sizing) {
+    float: $sizing;
+    display: block;
+}
+
+@mixin border-bottom($border) {
+    border-bottom: $border;
+}
+
+/* Mixins for Media Querys */
+
+@mixin center-mobile  {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@mixin display($variant-display) {
+    display: $variant-display;
+}
+
+@mixin text-center ($center-width, $center-margin, $center-align) {
+    width: $center-width;
+    margin: $center-margin;
+    text-align: $center-align;
+}
+
+@mixin avatar-chat ($name-img, $value) {
+     content: '';
+    background-image: url(../img/originals/#{$name-img}.#{$value}); 
+     border-radius: 100%;
+     width: 74px;
+     height: 74px;
+     @include position(absolute, -20%, auto);
+     top: 0;
+}
+
+@mixin border-top($border-color) {
+    border-top: 6px solid $border-color;
+}
+
+@mixin dropdown-menu($pict-svg) {
+      @include svg ($main-color, 60px, 60px);
+      background: url(../img/svg/#{$pict-svg}.svg);
+      display: block;
+      @include position(absolute, 4%, 24px);
+      cursor: pointer;
+}

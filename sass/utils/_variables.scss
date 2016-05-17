@@ -1,0 +1,45 @@
+/* Colors */
+
+$main-color: #000;
+$black-lighter: #333;
+$orange: rgba(242, 129, 46, 0.35);
+$orange-border: #f2812e;
+$zero: #bcbcbc;
+$below-zero: #e44040;
+$above-zero: #26bc1b;
+$light-grey: #bababa;
+$grey: #999;
+$white: #fff;
+$right-border: #e5e5e5;
+$twitter-bg: #00b7ec;
+$facebook-bg: #425497;
+$vk-bg: #526e8f;
+$clear : rgba(255, 255, 255, 0.8);
+$lighter-grey : rgba(255, 255, 255, 0.4);
+
+/* Fonts */
+
+$main-font: "Roboto", sans-serif;
+$font-light: "RobotoLight", sans-serif;
+$font-medium: "RobotoMedium", sans-serif;
+$font-bold: "RobotoBold", sans-serif;
+
+/* Indents */
+
+$margin: 15px;
+$padding: 10px;
+
+/* Position */
+
+$main-position: relative;
+
+/* Border */
+
+$border-radius: 2px;
+
+/* Width */
+
+$width: 100%;
+$width-device: 1281px;
+
+$old-ie: false !default;

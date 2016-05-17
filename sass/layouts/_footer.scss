@@ -1,0 +1,141 @@
+/*==============================
+
+   FOOTER
+
+=============================*/
+
+footer {
+    @include center;
+    padding: 48px 0;
+    
+    .logo-txt {
+        padding-left: $padding * 6 + 1;
+        padding-right: 8.2%;
+        margin-right: 0;
+        
+        @media screen and (max-width: 1280px) {
+            @include display(none);
+        }
+    }
+    
+    .social-networks {
+         @include float-box (none);
+         margin-left: 12%;
+         display: inline-block;
+         vertical-align: top;
+        
+        div {
+            @include float-box (left); 
+            @include svg ($white, 25px, 25px);
+            border-radius: 50px;
+            text-align: center;
+            margin: $margin + 3 $margin + 5 0 0;
+        }
+        
+        svg {
+           @include svg ($white, 13px, 13px);
+            margin-top: 6px;
+            
+            @media screen and (max-width: 1280px) {
+                width: 40px;
+                height: 40px;
+                margin-top: 25%;
+            }
+        }
+        
+        .footer-twitt {
+            background-color: $twitter-bg;
+            
+            @media screen and (max-width: 1280px) {
+                @include border-top(#00a4d4);
+            }
+        }
+        
+        .footer-facebook {
+            background-color: $facebook-bg;
+            
+            @media screen and (max-width: 1280px) {
+                @include border-top(#2b3e82);
+            }
+        }
+        
+        .footer-vk {
+            background-color: $vk-bg;
+            @media screen and (max-width: 1280px) {
+                @include border-top(#4a6788);
+            }
+        }
+        
+        .footer-gmail {
+            background-color:  #d94435;
+            
+            @media screen and (max-width: 1280px) {
+                @include border-top(#c33d30);
+            }
+        }
+        
+        .footer-ok {
+            background-color:  #f2812e;
+            
+              @media screen and (max-width: 1280px) {
+                @include border-top(#d97429);
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1280px) {
+         @include center-mobile;
+         background-color: $white;
+         position: relative;
+        
+        .footer-list {
+            display: block;
+            margin-top: 13%;
+            background-color: $black-lighter;
+            
+            li {
+                float: none;
+                height: 110px;
+                margin-right: 0;
+                padding-left: 31px;
+                padding-right: 0;
+                
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+                
+                a {
+                    @include main-font(#adadad, 300, 2.5em, 0.6, $font-light); 
+                    line-height: 3.5;
+                    vertical-align: middle;
+                    border-bottom: 1px solid #515151;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        
+        .social-networks {
+                position: absolute;
+                float: none;
+                top: 0;
+                margin: 0;
+                width: 100%;
+            
+            div {
+                position: relative;
+                top: 0;
+                width: 20%;
+                height: 128px;
+                border-radius: 0; 
+                margin: 0;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1280px) {
+        padding-bottom: 0;
+    }
+}

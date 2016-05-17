@@ -1,0 +1,5 @@
+/* Hide Swiper for IE 9  */
+
+.best-materials {
+    display: none!important;
+}
